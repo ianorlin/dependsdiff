@@ -20,5 +20,5 @@ cat /tmp/metapackage_dep_listing >> /tmp/depends_packages
 sort --unique /tmp/depends_packages -o /tmp/depends_packages
 sort /tmp/metapackage_dep_listing -o /tmp/metapackage_dep_listing 
 
-diff /tmp/metapackage_dep_listing /tmp/depends_packages; 
+diff   /tmp/metapackage_dep_listing /tmp/depends_packages|grep '^[<>\|]'; 
 fi
